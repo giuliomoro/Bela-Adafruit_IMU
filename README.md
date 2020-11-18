@@ -4,7 +4,7 @@ Reading values on a Bela (http://bela.io) from the I2C board from Adafruit (http
 
 ## Getting Started
 
-Connect the 9-DOF sensor to the I2C pins on the Bela. Put the code in a project (I use the project name Adafruit_IMU) on your Bela and run via IDE or Bela script (may require the better-i2c branch for the moment 2018-03-12) to compile. Then while logged in on the Bela through ssh into the bela using
+Connect the 9-DOF sensor to the I2C pins on the Bela. Put the code in a project (I use the project name Adafruit_IMU) on your Bela and run via IDE or Bela script (may require the better-i2c-rebased-2020 branch for the moment 2020-11-16) to compile. Then while logged in on the Bela through ssh into the bela using
 ```ssh root@192.168.7.2```
 you have to manually stop the process to free the IDE
 `pkill -9 Adafruit_IMU` (or whatever you call your project)

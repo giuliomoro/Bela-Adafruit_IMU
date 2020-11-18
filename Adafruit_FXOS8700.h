@@ -3,9 +3,9 @@
 #ifndef __FXOS8700_H__
 #define __FXOS8700_H__
 
+#include <stdint.h>
 #include <I2c.h>
 #include <vector>
-#include "Utilities.h"
 
 #define SENSORS_GRAVITY_STANDARD (9.80665F) /**< Earth's gravity in m/s^2 */
 

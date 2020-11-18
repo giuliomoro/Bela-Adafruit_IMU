@@ -29,9 +29,9 @@ The Bela software is distributed under the GNU Lesser General Public License
 #include "Adafruit_FXOS8700.h"
 #include "Adafruit_FXAS21002C.h"
 
-#include <OSCClient.h>
+#include <libraries/OscSender/OscSender.h>
 
-OSCClient oscClient;
+OscSender oscSender;
 
 
 
@@ -127,7 +127,7 @@ int main(int main_argc, char *main_argv[])
 	
 	
 	// OSC 
-    oscClient.setup(remotePort, remoteIp);
+    oscSender.setup(remotePort, remoteIp);
 
 	int sleepTime = 1000000/sampleFreq;
 	while(!gShouldStop)
@@ -159,7 +159,7 @@ void readIMU(void*)
 	float mag = sqrt(pow(accmag.accel_vel.x, 2) + pow(accmag.accel_vel.y, 2) + pow(accmag.accel_vel.z, 2));
 	mag = mag * 50;
 	//printf("MAGNITUDE: %f \n", mag);
-	oscClient.sendMessageNow(oscClient.newMessage.to("/imu").add(mag).end());
+	oscSender.newMessage("/imu").add(mag).send();
 	
 	
 	

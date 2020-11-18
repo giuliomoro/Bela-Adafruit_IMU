@@ -32,6 +32,7 @@
  *
  */
 
+#include <stdint.h>
 #include "Adafruit_FXAS21002C.h"
 
 #define SENSORS_DPS_TO_RADS               (0.017453293F)          /**< Degrees/s to rad/s multiplier */
